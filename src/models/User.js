@@ -1,5 +1,5 @@
-import { Schema } from "mongoose";
-import { compare, hash, Hash } from "bcryptjs";
+import { Schema, model } from "mongoose";
+import { compare, hash } from "bcryptjs";
 import { sign } from "jsonwebtoken";
 import { SECRET } from "../constants";
 import { randomBytes } from "crypto";
@@ -45,7 +45,7 @@ const UserSchema = new Schema({
 //Prehook method
 UserSchema.pre('save', async function (next) {
   let user = this
-  if (!useer.isModified("password")) return next()
+  if (!user.isModified("password")) return next()
   user.password = await hash(user.password, 10)
   next()
 })

@@ -7,12 +7,18 @@ import { json } from "body-parser";
 //IMPORT APPLICATION CONSTANTS
 import { DB, PORT } from './constants'
 
+//Router exports
+import userApis from "./apis/users"
+
 // initialize express application
 const app = express();
 
 //Apply application middlewares
 app.use(cors())
 app.use(json())
+
+//Inject router and apis
+app.use('/users', userApis)
 
 
 const main = async () => {
