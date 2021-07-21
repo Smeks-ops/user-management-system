@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node -r esm",
-    "dev":"nodemon -r esm ."
+    "dev": "nodemon -r esm ."
   },
   "keywords": [],
   "author": "Osemeke Echenim",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^7.4.5",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "consola": "^2.15.3",

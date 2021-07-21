@@ -8,3 +8,4 @@ export const PORT = process.env.PORT || process.env.APP_PORT;
 export const DB = process.env.APP_DB;
 export const SENDGRID_API = process.env.APP_SENDGRID_API;
 export const SECRET = process.env.APP_SECRET;
+export const HOST_EMAIL = process.env.HOST_EMAIL;
